@@ -1,4 +1,5 @@
 import { type FunctionComponent } from "preact";
+import { Head } from "$fresh/runtime.ts";
 
 type FooterIconProps = {
   href: string;
@@ -46,6 +47,9 @@ function LinkedIn() {
 const Page: FunctionComponent = ({ children }) => {
   return (
     <>
+      <Head>
+        <link rel="modulepreload" href="plugin-click-animation-main.js" />
+      </Head>
       <main class="w-2/5 font-mono">
         {children}
       </main>
